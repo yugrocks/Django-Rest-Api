@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <title>USER INTERFACE FOR THE API</title>
+    
+    </head>
+<body class="container">
+<div class="row row-content">
+    <div class="col-sm-6 col-xs-12 jumbotron">
+                 <form class="form" name="form-horizontal" enctype="multipart/form-data"
+                 action="{% url 'upload' %}" method="POST">
+                    <label class="btn btn-default btn-file">Select File
+                     <input type="file" name="file"  class="btn btn-primary"></label>
+                    <p style="padding:10px;"></p>
+                 <button class="btn btn-info" type="submit" value="Upload">Upload</button>
+                 </form>
+    </div>
+    <div class="col-sm-7 col-xs-12 jumbotron">
+        <form class="form" action="search/" method="POST">
+            
+            <input class="form-control" type="text" name="q">
+                 <button class="btn btn-info" type="submit" value="Search">Search Question</button>
+        </form>
+    </div>
+    
+    <div class="col-sm-7 col-xs-12 jumbotron">
+        <form class="form" action="delete/" method="POST">
+            
+            <input class="form-control" type="text" name="delete">
+                 <button class="btn btn-info" type="submit" value="Search">Delete this question</button>
+        </form>
+    </div>
+ </div>
+    
+ <div class="col-sm-7 col-xs-12 jumbotron">   
+<form method="POST" action="/put/" class="form-horizontal" role="form">
+                   <div class="form-group">
+                       <label for="Question" class="col-sm-2 col-xs-12 control-label">Question</label>
+                       <div class="col-xs-12 col-sm-10">
+                           <input type="text" id="Question" name="Question" class="form-control" placeholder="Enter your Question" required>
+                       </div>
+                   </div>
+                   <div class="form-group">
+                       <label for="Option_A" class="col-xs-12 col-sm-2 control-label">Option_A</label>
+                       <div class="col-xs-12 col-sm-10">
+                           <input type="text" class="form-control" id="Option_A" placeholder="Option_A" name="Option_A">
+                       </div>
+                   </div>
+                   <div class="form-group">
+                       <label for="Option_B" class="col-xs-12 col-sm-2 control-label">Option_B</label>
+                       <div class="col-xs-12 col-sm-10">
+                           <input  class="form-control" id="Option_B" name="Option_B" >
+                       </div>
+                       
+                       
+                   </div>
+    
+     <div class="form-group">
+                       <label for="Option_C" class="col-xs-12 col-sm-2 control-label">Option_C</label>
+                       <div class="col-xs-12 col-sm-10">
+                           <input  class="form-control" id="Option_C" name="Option_C" >
+                       </div>
+                       
+                       
+                   </div>
+    
+     <div class="form-group">
+                       <label for="Option_D" class="col-xs-12 col-sm-2 control-label">Option_D</label>
+                       <div class="col-xs-12 col-sm-10">
+                           <input  class="form-control" id="Option_D" name="Option_D" >
+                       </div>
+                       
+                       
+                   </div>
+    
+    
+     <div class="form-group">
+                       <label for="Correct_Option" class="col-xs-12 col-sm-2 control-label">Correct Option</label>
+                       <div class="col-xs-12 col-sm-10">
+                           <input  class="form-control" id="Correct_Option" name="Correct_Option" type="textarea">
+                       </div>                   
+                   </div>
+    
+    
+                   <div class="row row-content">
+                   <div  class="col-xs-2 col-sm-2 col-sm-offset-2">
+                   <button id="send" class="btn" type="submit"><p style="font-family:Georgia;padding:0px;color:cornFlowerBlue"><strong>Add Question</strong></p></button>
+                   </div>
+                   </div>
+               </form>
+
+    </div>
+
+</body>            
+
+
+</html>
